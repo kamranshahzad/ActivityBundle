@@ -1,0 +1,20 @@
+{% extends themes %}
+
+
+
+{% block body %}
+
+<div class="col-lg-6">
+        <fieldset>
+            <legend>Add Country</legend>
+                <form class="entity" action="{{ path('activity_addcountry') }}" method="post"  class="form-horizontal">
+                    {{ form_errors(form) }}
+                    {{ form_rest(form) }}
+                    <div class="actions">
+                        <button type="submit">Add</button>
+                    </div>
+                </form>
+        </fieldset>
+</div>
+
+{% endblock body %}

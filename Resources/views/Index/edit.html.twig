@@ -1,0 +1,16 @@
+
+
+<div class="col-lg-6">
+        <fieldset>
+            <legend>Example extended forms via view</legend>
+            {% block body %}
+                <form class="entity" action="{{ path('tags_update', { 'id': entity.id }) }}" method="post"  class="form-horizontal">
+                    {{ form_errors(edit_form) }}
+                    {{ form_rest(edit_form) }}
+                    <div class="actions">
+                        <button type="submit">Add</button>
+                    </div>
+                </form>
+            {% endblock %}
+        </fieldset>
+</div>

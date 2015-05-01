@@ -1,0 +1,4 @@
+_kamran_activity_urls:
+    resource: "@KamranActivityBundle/Controller"
+    type:     annotation
+

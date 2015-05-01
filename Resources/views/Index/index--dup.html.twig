@@ -1,0 +1,35 @@
+{% extends 'KamranActivityBundle::layout.html.twig' %}
+
+
+{% block body %}
+
+    {% verbatim %}
+
+    <div id="messages" ng-show="message">{{ message }}</div>
+    <div class="mainWrapper">
+        <form novalidate class="css-form" ng-controller="InfoCtrl" ng-submit="processForm()">
+            Title:<input type="text" ng-model="infoData.title" required /><br />
+            Website Url:<input type="text" ng-model="infoData.url" required /><br />
+            Username:<input type="text" ng-model="infoData.username" required /><br />
+            Password:<input type="text" ng-model="infoData.password" required /><br />
+            Email Address:<input type="text" ng-model="infoData.email" required /><br />
+            Note:<input type="text" ng-model="infoData.note" required /><br />
+            <button ng-click="update(infoData)">SAVE</button>
+        </form>
+    </div>
+    {{ infoData }}
+    {% endverbatim %}
+    <style type="text/css">
+        .css-form input.ng-invalid.ng-dirty {
+            background-color: #FA787E;
+        }
+        .css-form input.ng-valid.ng-dirty {
+            background-color: #78FA89;
+        }
+    </style>
+
+{% endblock %}
+
+
+
+
